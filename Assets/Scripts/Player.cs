@@ -6,14 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed;
+    [SerializeField] float moveSpeed;
     float xInput;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -24,7 +19,7 @@ public class Player : MonoBehaviour
 
         if(transform.position.y <= -5f)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            RestartScene();
         }
     }
 
@@ -32,7 +27,12 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag == "Stone")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            RestartScene();
         }
+    }
+
+    void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

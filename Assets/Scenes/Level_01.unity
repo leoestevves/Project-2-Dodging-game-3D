@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 942930712}
   - component: {fileID: 942930711}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Ground 01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -613,6 +613,10 @@ MonoBehaviour:
   spawnPoint: {fileID: 486258040}
   maxX: 2.7
   scoreText: {fileID: 27584596}
+  spawnFirstDelay: 0.5
+  spawnUpdateDelay: 1.1
+  scoreFirstDelay: 3.8
+  scoreUpdateDelay: 1.1
 --- !u!4 &1173478464
 Transform:
   m_ObjectHideFlags: 0
@@ -641,7 +645,7 @@ GameObject:
   - component: {fileID: 1248383451}
   - component: {fileID: 1248383450}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: Ground 02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

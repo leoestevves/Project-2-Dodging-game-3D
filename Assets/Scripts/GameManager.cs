@@ -5,21 +5,26 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject stone;
-    public Transform spawnPoint;
+    [SerializeField] GameObject stone;
+    [SerializeField] Transform spawnPoint;
 
-    public float maxX;
+    [SerializeField] float maxX;
 
     int score = 0;
 
-    public TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI scoreText;
+
+    [SerializeField] float spawnFirstDelay;
+    [SerializeField] float spawnUpdateDelay;
+    [SerializeField] float scoreFirstDelay;
+    [SerializeField] float scoreUpdateDelay;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("SpawnStone", 0.5f, 1.1f);
+        InvokeRepeating("SpawnStone", spawnFirstDelay, spawnUpdateDelay);
 
-        InvokeRepeating("UpdateScore", 3.8f, 1.1f);
+        InvokeRepeating("UpdateScore", scoreFirstDelay, scoreUpdateDelay);
     }
 
     // Update is called once per frame
